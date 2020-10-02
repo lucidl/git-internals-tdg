@@ -90,7 +90,6 @@ A Toolkit Design
 Git is not really a single binary,
 but a collection of dozens of small specialized programs,
 which is sometimes annoying to people trying to learn Git,
-__BM__
 but is pretty cool when you want to do anything non-standard with it.
 Git is less a program and more a toolkit that can be combined and chained to do new and interesting things.
 For a long time,
