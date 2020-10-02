@@ -1,0 +1,23 @@
+The Git Directory
+When you initialize a Git repository,
+either by cloning an existing one or creating a new one,
+the first thing Git does is create a Git directory.
+This is the directory that stores all the object data, tags, branches, hooks and more.
+Everything that Git permanently stores goes in this single directory.
+When you clone someone else’s repository,
+it basically just copies the contents of this directory to your computer.
+Without a checkout (called a working directory) this is called a bare Git repo and moving it to another computer backs up your entire project history.
+It is the soul of Git.
+When you run git init to initialize your repository,
+the Git directory is by default installed in the directory you are currently in as .git.
+This can be overridden with the GIT_DIR environment variable at any time.
+In fact, the Git directory does not need to be in your source tree at all.
+It’s perfectly acceptable to keep all your Git directories in a central place
+(ex: /opt/git/myproject.git)
+and just make sure to set the GIT_DIR variable when you switch projects you are working on
+(ex: /home/username/projects/myproject).
+The Git directory for our little project looks something like this:
+For more in-depth information on the Git directory layout,
+see the git repository layout docs.
+(http://www.kernel.org/pub/software/scm/git/docs/repository-layout.html)
+For now, let’s go over some of the more important contents of this directory.

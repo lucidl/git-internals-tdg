@@ -1,0 +1,32 @@
+Use Cases
+So why is this helpful, exactly?
+It means that you can keep your development cycles loosely coupled.
+Here is an example of a common workflow with cheap branches.
+You have a master branch that is always stable – you never merge anything into it that you wouldn’t put into production.
+Then you have a development branch that you merge any experimental code into before you imagine pulling it into the master branch.
+It’s a common error to think of the master branch as being equivalent to Subversion’s trunk.
+However, a custom development branch is much closer in practice to the Subversion trunk,
+where experimental work is done.
+You create a new branch each time you begin to work on a story or feature,
+branching it off your current development branch each time,
+so if you get blocked and need to put it on hold, it doesn’t effect anything else.
+When you do get back to them, you rebase them to the current development and it is just like you started from there.
+Often times you merge the branch back into development and delete it the same day that you created it.
+If you get a huge project or idea – say refactoring the entire code base to the newest version of your framework or switching database vendors or something,
+you create a long-term branch,
+continuously rebase it to keep it in line with other development,
+and once everything is tested and ready, merge it in with your master.
+Working with others is unbelievably easy.
+You ask in an IRC room if someone has implemented a feature in a library you are using.
+Turns out that someone has and you are sent the URL of their public Git repo for that project.
+You add it as a remote, fetch it, create a new merge-feature branch off your development branch,
+merge in the new changes and you’re done.
+There’s no awkward emailing of patches – you can just add contributors as a remote and try out their branches before deciding to merge them in.
+If it breaks things or is not a good patch, you simply delete the merge-feature branch and that’s it.
+A common problem with open source projects managed with Subversion is that a patch is sent which was made against and older version of the code base.
+With Git, it’s as easy as applying the outdated patch in a new branch,
+then rebasing from master to bring it up to date with the current code base.
+You branch and rebase or merge several times a day in and out of several different branches,
+some of which last for hours and some are continually there.
+Once you get used to this pattern,
+it completely changes the way you approach your development and the way you contribute and collaborate.

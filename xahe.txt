@@ -1,0 +1,6 @@
+If I commit a second time, the commit object will look more like this:
+Notice how the parent in that commit is the same SHA-1 value of the last commit we did?
+Most times a commit will only have a single parent like that,
+but if you merge two branches,
+the next commit will point to both of them.
+The current record for number of commit parents in the Linux kernel is 12 branches merged in a single commit!

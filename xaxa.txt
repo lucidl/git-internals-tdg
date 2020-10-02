@@ -1,0 +1,11 @@
+Graphical Interfaces
+There are two major graphical interfaces that come with Git as tools to browse the repository.
+gitk
+A very popular choice for browsing Git repositories is the Tcl/Tk based browser called gitk.
+If you want to see a simple visualization of your repository,
+gitk is a great tool.
+Gitk will also take most of the same arguments that git log will take,
+including —since, —until, —max-count, revision ranges and path limiters.
+One of the most interesting visualizations that I regularly use is gitk—all,
+which will show all of your branches next to each other
+(rather than just the one you are currently on).

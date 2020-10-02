@@ -1,0 +1,10 @@
+Simple Merging
+So now we want to move the changes in our newfunc branch back into our master branch and remove it.
+This will require us merging one branch into another.
+Since we’re already in our master branch,
+we’ll merge in the newfunc branch like this:
+$ git merge newfunc
+Easy peasy.
+We can see that the simplegit.rb file now has four new lines and the README file was auto-merged.
+Now we can get rid of our ‘newfunc’ branch with a simple:
+$ git branch -d newfunc

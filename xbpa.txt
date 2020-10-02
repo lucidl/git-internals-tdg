@@ -1,0 +1,37 @@
+Multiple Remotes
+Although a bit different in syntax maybe,
+most of that should seem familiar to any users of other SCM systems.
+However, this is where the ‘decentralized’ part comes in.
+In Git, there is really no special repository.
+You can add as many remote repositories that are related to your codebase in some way as you want.
+You can add each of your co-workers repositories as read-only repositories,
+you can have a centralized one you all share,
+one out on your production servers outside the firewall,
+a public one for stable or sanitized pushes on your personal webserver,
+one on your build server, etc, etc.
+Pushing to and pulling from multiple sources is easy and straightforward.
+You simply add remotes:
+$ git remote add mycap git@github.com:schacon/capistrano.git
+$ git remote add official git://github.com/jamis/capistrano.git
+Then, if the the project is updated,
+I can pull in the changes from one remote,
+merge them locally,
+and then push to another remote.
+$ git fetch official
+$ git merge official/master
+$ git push mycap master
+I can also add several remotes to pull and merge from,
+in this case,
+one for every developer with a public fork of that project that might push changes I care to try.
+You can also remove remotes at any time,
+which simply removes the lines that contain the URL in your .git/config file
+and the references to their remote branches in .git/refs/[remote_name] directory.
+It will not remove any of the git objects,
+so if you decide to add it again and fetch,
+very little will be transferred.
+You can also view useful information about a remote branch by using the remote show command.
+For example,
+if I run this on a checkout of the Git source code itself,
+I will see this:
+$ git remote show origin
+• git remote (http://www.kernel.org/pub/software/scm/git/docs/git-remote.html)

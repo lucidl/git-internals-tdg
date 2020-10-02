@@ -1,0 +1,35 @@
+Browsing Git
+Git also gives you access to a number of lower level tools that can be used to browse the repository,
+inspect the status and contents of any of the objects,
+and are generally helpful for inspection and debugging.
+Showing Objects
+The git show command is really useful for presenting any of the objects in a very human readable format.
+Running this command on a file will simply output the contents of the file.
+Running it on a tree will just give you the filenames of the contents of that tree,
+but none of its subtrees.
+Where it’s most useful is using it to look at commits.
+showing commits
+If you call it on a tree-ish that is a commit object,
+you will get simple information about the commit
+(the author, message, date, etc)
+and a diff of what changed between that commit and its parents.
+showing trees
+Instead of the git show command,
+it’s generally more useful to use the lower level git ls-tree command to view trees,
+because it gives you the SHA-1s of all the blobs and trees that it points to.
+You can also run this command recursively,
+so you can see all the subtrees as well.
+This is a great way to get the SHA-1 of any blob anywhere in the tree without having to walk it one node at a time.
+The -t makes it also show the SHA-1s of the subtrees themselves,
+rather than just all the blobs.
+showing blobs
+Lastly, you may want to extract the contents of individual blobs.
+The cat-file command is an easy way to do that,
+and can also serve to let you know what type of object a SHA-1 is,
+if you don’t know.
+It is sort of a catch-all command that you can use to inspect objects.
+With those basic commands, you should be able to explore and inspect any object in any git repository relatively easily.
+git object browsing screencast
+In this screencast, we show how to browse and inspect raw Git objects.
+The major tools covered are the git cat-file and git ls-tree commands to inspect the object contents,
+and then we cover some of the included graphical browsers, gitk and gitweb.

@@ -1,0 +1,11 @@
+The Blob
+In Git, the contents of files are stored as blobs.
+It is important to note that it is the contents that are stored, not the files.
+The names and modes of the files are not stored with the blob, just the contents.
+This means that if you have two files anywhere in your project that are exactly the same,
+even if they have different names,
+Git will only store the blob once.
+This also means that during repository transfers,
+such as clones or fetches,
+Git will only transfer the blob once,
+then expand it out into multiple files upon checkout.

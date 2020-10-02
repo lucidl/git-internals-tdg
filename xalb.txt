@@ -1,0 +1,35 @@
+Rebasing
+Let’s say you and another developer, Jen, are working on the same project simultaneously.
+She clones from you, and works for a while and commits.
+You have committed in the meantime and want to get your work in sync,
+so you add her repository as the remote jen,
+do a fetch and merge her changes in, creating a new merge commit.
+(All commits that are simply merges are given a darker color in this example)
+At this point, you both do work and commit changes and then you fetch and merge from her again.
+Then she does another commit and you fetch and merge once more.
+At this point, you’ll have a commit history that looks something like this:
+Perfectly fine, but it can get a little confusing when you litter the history with all those commits that do nothing but merge unshared changes.
+The longer you keep out of sync,
+the worse this can get.
+This is where the rebasing command comes in.
+With rebase, Git will checkout the upstream branch,
+in this case, Jen’s master branch,
+and then replay all the changes you’ve done since you forked on top of those files,
+as if you had forked your work off at that point and done all your changes, rather than earlier.
+Rebase will literally produce a series of patch files of your work and start applying them to the upstream branch,
+automatically making new commits with the same messages as before and orphaning your older ones.
+These objects can then be removed, since nothing points to them,
+when you run the garbage collection tools (see “The Care and Feeding of Git” section).
+So let’s see what happens if we rebase rather than merge in the same scenario.
+Here we have our first merge and we can see that it orphans Commit 1 and applies the changes between Commit 0 and Commit 1 to the files in Remote Commit 1,
+creating a new Commit 2.
+Then, as you’ll remember, you and Jen both commit again.
+You’ll notice that now it looks like she cloned you and committed and then you changed that code,
+rather than you both working at the same time and merging.
+At this point, instead of merging two more times like we did originally,
+we rebase the next two commits she makes.
+And finally, we are left with a commit history that looks like Figure 1, rather than Figure 2,
+which is what we would have if we had merged instead.
+You should remember to only do this on local branches
+before you push or on repositories that nobody has fetch access to – if anyone pulls down the objects that will become abandoned during a rebase,
+it gets a bit frustrating.

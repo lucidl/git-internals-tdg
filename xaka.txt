@@ -1,0 +1,5 @@
+Traversal
+So, what do all the arrows in these illustrations really mean?
+How does Git actually retrieve these objects in practice?
+Well, it gets the initial SHA-1 of the starting commit object by looking in the .git/refs directory for the branch, tag or remote you specify.
+Then it traverses the objects by walking the trees one by one, checking out the blobs under the names listed.

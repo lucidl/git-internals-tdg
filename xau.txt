@@ -1,0 +1,55 @@
+Interactive Adding
+Although that will work for all of your development needs
+– many developers simply use -a nearly every time they commit to just automatically add everything to the index
+– there is another way of adding files that makes for a more controlled and thematic set of commits.
+This is called interactive adding, and it is a very powerful tool to controlling what goes into each commit.
+Let’s say we add a new function to our lib/simplegit.rb file,
+add a new task to our Rakefile and then add a new TODO file to our project.
+Later we come back and want to commit,
+but we don’t remember which files had to do with each other and we don’t just want to commit them all together
+because that’s confusing for collaborators trying to review our code.
+Interactive mode lets us modify our index interactively before committing.
+To fire it up, type git add -i:
+We can see that we have two files that are being tracked
+(have been added at some point in the past)
+that have been modified.
+We cannot yet see our new TODO file, though.
+To add that, type 4 for the add untracked option and hit Enter.
+You will see all the untracked files in your working directory.
+Type the numbers of the files you want to add,
+or a range (i.e.: 1-5),
+and hit enter twice when you’re done.
+This will drop you back to the main menu.
+You can then type 1 to see what your index looks like now.
+You can see that the TODO file is now staged (in the index),
+but the other two are not.
+Let’s add the Rakefile,
+but not the lib/simplegit.rb file and commit it.
+To do that, we hit 2, which lists the files we can update,
+type 1 and enter to add the Rakefile,
+then hit enter again to go back to the main menu.
+Then we hit 7 to exit and run the git commit command
+The interactive shell is pretty simple and very powerful
+– playing with it instead of running git add commands directly may help in understanding what’s happening,
+since you can see the status of your files in the index versus the working directory more clearly.
+It helps visualize that what is in your index (the staged column) is what will be committed when you run git commit.
+You can also do more complicated things,
+like going through all of your change patches hunk by hunk,
+deciding if each hunk should be applied to the next commit or not.
+This means that if you’ve made a bunch of changes to one file,
+you can commit part of those changes in one commit,
+and the rest in a second.
+Try the patch menu option in the Interactive Adding menu to try this out.
+Beware of using interactive adding if you are already used to running git commit -a.
+If you run through the whole interactive add process and then run git commit -a,
+it will basically ignore everything you just did and just add all modified files.
+interactive add screencast
+The next screencast is Interactive Add in Git,
+which demonstrates how to use the git add—interactive command.
+It covers all of the major features of interactive adding,
+including status, update, revert, add untracked, patch and diff.
+removing
+For removing files from your tree,
+you can simply run: git rm <filename>
+This will remove that file from the index (and thus from the next commit) as well as from your working directory.
+On your next commit, the tree that commit points to will simply not contain that file anymore.

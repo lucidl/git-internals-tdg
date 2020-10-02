@@ -1,0 +1,21 @@
+integration manager model
+This is where each developer has a public repository,
+but one is considered the ‘official’ repository
+– it is used to create the packages and binaries.
+A person or core team has commit rights to it,
+but many other developers have public forks of that repository.
+When they have changes,
+they issue a pull request to an integration manager,
+who adds them as a remote if they haven’t already
+– then merges, tests, accepts and pushes.
+This is largely how community-based git repositories like GitHub were built to work and how many smaller open source projects operate.
+In the end, there is really no single right way to do it
+– being a decentralized system,
+you can have a model with all of these aspects to it,
+or any combination you can think of.
+You can also have subgroups using different models on the same codebase.
+For example,
+if your company might have an internal fork of the Linux kernel
+that is managed by the Integration Manager model in addition to pulling in changes occasionally from Linus’s branch.
+In the end,
+you and your team will have to think about what will work best for you.

@@ -1,0 +1,16 @@
+Simple Case
+Now, let’s see how Git handles branching, fetching and merging operations abstractly.
+For the following illustrations, we will represent the entire tree and the commit it points to as a single object.
+Suppose that we work on a project for a while, then we get an idea for something that may not work out,
+but we want to do a quick proof-of-concept.
+We create a new branch called experiment off of our main branch,
+which is by convention called master.
+We then switch to the new branch and create a few commits.
+Then, our boss comes in and says we need a hot fix to production.
+So we switch back to our master branch, make the change,
+push the release and then tag the new commit with the release number.
+Then we go back to our experiment branch, continue working and commit again.
+At this point, we show the new branch code to our co-workers and everyone likes the new changes.
+We decide we want to merge them back into our main branch,
+so we merge the changes and delete our experiment branch.
+Our history of commit objects now looks like this:

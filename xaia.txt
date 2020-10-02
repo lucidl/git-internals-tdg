@@ -1,0 +1,10 @@
+The Tag
+The final type of object you will find in a Git database is the tag.
+This is an object that provides a permanent shorthand name for a particular commit.
+It contains an object, type, tag, tagger and a message.
+Normally the type is commit and the object is the SHA-1 of the commit you’re tagging.
+The tag can also be GPG signed, providing cryptographic integrity to a release or version.
+We’ll talk a little bit more about tags and how they differ from branches
+(which also point to commits, but are not stored as objects)
+in the next section,
+where we’ll pull all of this together into how all these objects relate to each other conceptually.

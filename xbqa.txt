@@ -1,0 +1,13 @@
+dictator and lieutenant model
+This is a highly hierarchical model where one individual has commit rights to a blessed repository
+that everyone else fetches from.
+Changes are fetched from developers by lieutenants responsible for specific subsystems and merged and tested.
+Lieutenant branches are then fetched by the dictator and merged and pushed into the blessed repository,
+where the cycle starts over again.
+This is a model something like the Linux kernel uses,
+Linus being the benevolent dictator.
+This model is much better for large teams,
+and can be implemented with multiple and varied levels of lieutenants and sub-lieutenants in charge of various subsystems.
+At any stage in this process,
+patches or commits can be rejected
+– not merged in and sent up the chain.

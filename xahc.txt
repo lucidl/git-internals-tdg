@@ -1,0 +1,4 @@
+The Commit
+So, now that we can store arbitrary trees of content in Git,
+where does the ‘history’ part of ‘tree history storage system’ come in?
+The answer is the commit object.

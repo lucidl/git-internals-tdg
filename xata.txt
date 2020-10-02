@@ -1,0 +1,17 @@
+Normal Workflow Examples
+Now that we have our repository, let’s go through some normal workflow examples of a single person developing.
+normal workflow screencast
+The second screencast we’ve provided is Normal Workflow in Git,
+which demonstrates how to setup your .gitignore file,
+how to use and interpret git status output,
+how to add and remove files from your index,
+how to commit and what git does in the object database during these operations.
+Ignoring
+First off, we will often want Git to automatically ignore certain files
+– often ones that are automatically generated during our development.
+For example,
+in Rails development we often want to ignore the log files,
+the production specific configuration files, etc.
+To do this, we can add patterns into the .gitignore file to tell Git that we don’t want it to track them.
+Here is an example .gitignore file.
+• .gitignore (http://www.kernel.org/pub/software/scm/git/docs/gitignore.html)

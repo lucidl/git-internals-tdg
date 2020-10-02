@@ -1,0 +1,18 @@
+instaweb
+If you don’t want to fire up Tk,
+you can also browse your repository quickly via the git instaweb command.
+This will basically fire up a web server running the gitweb
+(http://git.or.cz/gitwiki/Gitweb)
+CGI script using lighttpd, apache or webrick.
+It then tries to automatically fire up your default web browser and points it at the new server.
+When you are done, you can run the following to shut down the server:
+$ git instaweb --stop
+This is a quick way to throw up a web interface on your git repository for sharing with others
+or simply browsing it in a different way.
+For a more long term web interface to your repository,
+you can put the gitweb Perl files that come with Git into your cgi-bin directory.
+• git show (http://www.kernel.org/pub/software/scm/git/docs/git-show.html)
+• git ls-tree (http://www.kernel.org/pub/software/scm/git/docs/git-ls-tree.html)
+• git cat-file (http://www.kernel.org/pub/software/scm/git/docs/git-cat-files.html)
+• gitk (http://www.kernel.org/pub/software/scm/git/docs/gitk.html)
+• git instaweb (http://www.kernel.org/pub/software/scm/git/docs/git-instaweb.html)

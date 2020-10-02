@@ -1,0 +1,9 @@
+git/config
+This is the main Git configuration file.
+It keeps your project specific Git options,
+such as your remotes, push configurations, tracking branches and more.
+Your configuration will be loaded first from this file, then from a ~/.gitconfig file and then from an /etc/gitconfig file, if they exist.
+Here is an example of what a config file might look like:
+See the git-config
+(http://www.kernel.org/pub/software/scm/git/docs/git-config.html)
+docs for more information on available configuration options.

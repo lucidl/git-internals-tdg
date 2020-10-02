@@ -1,0 +1,4 @@
+To demonstrate these examples, we will develop a small ruby library that provides very simple bindings to Git,
+keeping the project in a Git repository.
+The basic layout of the project is this:
+Let’s take a look at what Git does when this is committed to a repository.

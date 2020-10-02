@@ -1,0 +1,18 @@
+Backup Tool
+Let’s suppose that you want to build something like a distributed Time Machine™ backup system (Apple all rights reserved)
+that efficiently packs up its backups and transfers them to multiple machines.
+I’m hoping by now that you could see the benefits of using the Git toolkit to accomplish this,
+but this particular problem is interesting because of something that Git doesn’t do,
+which is permissions.
+Git stores the mode of its content in the tree,
+but it doesn’t store any permissions data,
+which means it’s not good for backing up directories in which permissions are important.
+A good example would be the /etc directory on a Unix machine.
+One project that has tackled this is Gibak
+(http://eigenclass.org/hiki/gibak-backup-system-introduction).
+It implements a metastore in OCaml and it’s worth a look if this topic interests you.
+If you are interested in using Git in a non-standard way and plan to use Ruby,
+you might be interested in my git gem
+(http://jointheconversation.org/rubygit),
+which provides an object oriented interface in Ruby to the Git tools,
+including several of the lower level functions.

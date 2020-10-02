@@ -1,0 +1,30 @@
+Remotes
+Now lets take a look at remotes.
+Remotes are basically pointers to branches in other peoples copies of the same repository,
+often on other computers.
+If you got your repository by cloning it,
+rather than initializing it,
+you should have a remote branch of where you copied it from automatically added as origin by default.
+Which means the tree that was checked out during your initial clone would be referenced as origin/master,
+which means “the master branch of the origin remote.”
+Lets say you clone someone’s repository and make a few changes.
+You would have two references,
+one to origin/master which points to where the master branch was on the person’s repository you cloned from when you did so,
+and a master branch that points the most recent local commit.
+Now let’s say you run a fetch.
+A fetch pulls all the refs and objects that you don’t already have from the remote repository you specify.
+By default, it is origin, but you can name your remotes anything, and you can have more than one.
+Suppose we fetch from the repository that we originally cloned from and they had been doing some work.
+They have now committed a few times on their master branch,
+but they also branched off at one point to try an idea,
+and they named the branch idea locally,
+then pushed that branch.
+We now have access to those changes as origin/idea.
+We look at the idea branch and like where they’re going with it,
+but we also want the changes they’ve made on their master branch,
+so we do a 3-way merge of their two branches and our master.
+We don’t know how well this is going to work, so we make a tryidea branch first and then do the merge there.
+Now we can run our tests and merge everything back into our master branch if we want.
+Then we can tell our friend we cloned from to fetch from our repository,
+where we’ve merged their two branches for them and integrated some of our changes as well.
+They can choose to accept or reject that patch.

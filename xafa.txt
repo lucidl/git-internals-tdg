@@ -1,0 +1,7 @@
+Git Object Types
+Git objects are the actual data of Git,
+the main thing that the repository is made up of.
+There are four main object types in Git,
+the first three being the most important to really understand the main functions of Git.
+All of these types of objects are stored in the Git Object Database,
+which is kept in the Git Directory.

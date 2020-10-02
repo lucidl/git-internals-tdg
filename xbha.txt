@@ -1,0 +1,7 @@
+In this case we will simply fix the conflict,
+run ‘git add’ on the file and then run ‘git rebase—continue’
+which then makes our history look like this:
+Then all we have to do is switch to the master branch
+and merge in ‘story84’
+(which is called a ‘fast-forward’, since ‘master’ is now a direct ancestor of ‘story84’)
+to get this:

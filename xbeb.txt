@@ -1,0 +1,22 @@
+Resolving Conflicts
+That was a fairly simple problem,
+but what if we branch our code and then edit the same place in a file in different ways in each branch?
+In that case,
+we’ll get a conflict when we try to merge them back together.
+Git is not too aggressive in trying to resolve conflicts,
+since you don’t want it to make assumptions that are not necessarily correct,
+so bugs aren’t introduced without your knowledge.
+Let’s say that we created a versioning branch
+and then modified the version in the Rakefile to different versions in both the new branch and the master branch,
+then tried to merge them together.
+$ git merge versioning
+It tells us that there was a conflict and so the new commit object was not created.
+We will have to merge the conflicted file manually and then commit it again.
+The output tells us the files that had conflicts,
+in this case it was the Rakefile.
+We can see that in the master branch, the version was changed to 0.1.2
+and in the versioning branch, the same line was changed to 0.2.0.
+All we have to do is choose which one is correct and remove the rest of the lines,
+like so:
+Now we add and commit that file,
+and we’re good.

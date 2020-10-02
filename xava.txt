@@ -1,0 +1,17 @@
+Log – the Commit History
+So, now we have all this history in our Git repository.
+So what?
+What can we do with it?
+How can we see this history?
+The answer is the very powerful git log command.
+The log command can show you nearly anything you want to know about your commit history.
+Also, since the entire history is stored locally,
+it’s really fast compared with most other SCM systems,
+especially if your repository is packed
+(see the “Care and Feeding” section).
+If you just run git log, you will get output like this:
+This will show you the SHA-1 of each commit,
+the committer and date of the commit,
+and the full message,
+starting from the last commit on your current branch and going backward in reverse chronological order
+(so if there are multiple parents, it just squishes them together, interleaving the commits ordered by date)

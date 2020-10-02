@@ -1,0 +1,29 @@
+Fetching and Pulling
+So let’s say that we’re going to hack on TicGit,
+our git based ticket tracking system project.
+After we clone it,
+we look through the source code but don’t do anything right away.
+After some time passes we come back to the project but it may not still be up to date
+– changes may have occurred in the meantime.
+So we fetch an update.
+$ git fetch origin
+This will contact the server over the same protocol we used to clone it
+and grab all of the objects and references that have been added
+since our clone and update our ‘origin/[branch]’ branches to point to what the server is pointing at now.
+So, if we did create a tracking branch on ‘story84’
+and it was changed on the server
+(someone pushed an update),
+before we fetch,
+our local ‘story84’ branch and our remote ‘origin/story84’ branch will be the same.
+After we fetch, they will be different.
+‘origin/story84’ will now point to one of the new commit objects we downloaded during the fetch.
+At this point,
+we may want to merge ‘origin/story84’ into our local ‘story84’ branch.
+That’s easy enough,
+but if we want to do it automatically every time we fetch,
+we can use ‘git pull’, which is just a ‘fetch’ and then a ‘merge’ command.
+So, these commands are functionally equivalent:
+$ git pull origin/story84
+$ git fetch origin/story84; git merge origin/story84
+• git fetch (http://www.kernel.org/pub/software/scm/git/docs/git-fetch.html)
+• git pull (http://www.kernel.org/pub/software/scm/git/docs/git-pull.html)

@@ -1,0 +1,21 @@
+Pushing
+Now we can get updates from other repositories,
+but how can we push changes to them?
+If we have commit rights on the repository (normally over SSH),
+we can simply run git push.
+$ git push origin master
+The ‘origin’ in that case will be inferred if you leave it out,
+but if you’ve used a different name for your remote
+or you are trying to push one of your other branches,
+you can do that, too.
+$ git push scott-public experimental
+If you don’t specify a branch,
+it will infer that you want to push every branch that you and the server have in common.
+So, if you have pushed your ‘master’ branch and your ‘experimental’ branch to the ‘scott-public’ server at any point,
+running this will update the server to have the newest versions of both of them:
+$ git push scott-public
+Whereas this will only update the ‘master’ branch:
+$ git push scott-public master
+In Git, the opposite of ‘push’ is not ‘pull’, but ‘fetch’.
+A ‘pull’ is a ‘fetch’ and then a ‘merge’.
+• git push (http://www.kernel.org/pub/software/scm/git/docs/git-push.html)

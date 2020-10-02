@@ -1,0 +1,10 @@
+Branching and Merging
+Here we come to one of the real strengths of Git, cheap inline branching.
+This is a feature that truly sets it apart and will likely change the way you think about developing code once you get used to it.
+When you are working on code in Git, storing trees in any state and keeping pointers to them is very simple, as we’ve seen.
+In fact, in Git the act of creating a new branch is simply writing a file in the .git/refs/heads directory
+that has the SHA-1 of the last commit for that branch.
+Creating a branch is nothing more than just writing 40 characters to a file.
+Switching to that branch simply means having Git make your working directory look like the tree that SHA-1 points to
+and updating the HEAD file so each commit from that point on moves that branch pointer forward
+(in other words, it changes the 40 characters in .git/refs/heads/[current_branch_name] be the SHA-1 of your last commit).

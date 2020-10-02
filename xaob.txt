@@ -1,0 +1,33 @@
+.git/index
+This is the default location of the index file for your Git project.
+This location can be overridden with the GIT_INDEX environment variable,
+which is sometimes useful for temporary tree operations.
+See the chapter on the “Git Index” for more information on what this file is used for.
+.git/objects/
+This is the main directory that holds the data of your Git objects – that is,
+all the contents of the files you have ever checked in,
+plus your commit, tree and tag objects.
+The files are stored by their SHA-1 values.
+The first two characters make up the subdirectory and the last 38 is the filename.
+For example, if the SHA-1 for a blob we’ve checked in was a576fac355dd17e39fd2671b010e36299f713b4d
+the file we would find the Zlib compressed contents in is:
+[GIT_DIR]/objects/a5/76fac355dd17e39fd2671b010e36299f713b4d.
+git/refs/
+This directory normally has three subdirectories in it – heads, remotes and tags.
+Each of these directories will hold files that correspond to your local branches,
+remote branches and tags, respectively.
+For example, if you create a development branch, the file .git/refs/heads/development will be created
+and will contain the SHA-1 of the commit that is the latest commit of that branch.
+.git/HEAD
+This file holds a reference to the branch you are currently on.
+This basically tells Git what to use as the parent of your next commit.
+The contents of it will generally look like this:
+ref: refs/heads/master
+.git/hooks
+This directory contains shell scripts that are invoked after the Git commands they are named after.
+For example, after you run a commit,
+Git will try to execute the post-commit script,
+if it has executable permissions.
+See the online hooks documentation
+(http://www.kernel.org/pub/software/scm/git/docs/githooks.html)
+for more information on what you can do with hooks.

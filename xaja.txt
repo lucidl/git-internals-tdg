@@ -1,0 +1,20 @@
+An Example
+Lets look at an example of simple usage of Git and which objects are stored in the Git object database as we go.
+To begin with, we commit an initial tree of three files and two subdirectories, each directory with one file in it.
+Possibly something like this:
+When we first commit this tree, our Git model may look something like this:
+We have three trees,
+three blobs
+and a HEAD single commit that points to the top of the tree.
+The current branch points to our branch last commit
+and the HEAD file points to the branch we’re currently on.
+This lets Git know which commit will be the parent commit for the next commit.
+Now let’s assume that we change the tree lib/base/base_include.rb file and commit again.
+At this point, a new blob is added, which changes the tree that tree blob points to it,
+which changes the tree that points to that tree and
+so on to the top of the entire directory.
+Then a new commit object is added which points to its parent tree blob and the new tree,
+then the branch reference is moved forward.
+Let’s also say at this point we tag this commit as a release,
+which adds a new tag object.
+At this point, we’ll have the following in Git:

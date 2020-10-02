@@ -1,0 +1,3 @@
+The commit is very simple, much like the tree.
+It simply points to a tree and keeps an author, committer, message and any parent commits that directly preceded it.
+Since this was my first commit, there are no parents.

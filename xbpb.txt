@@ -1,0 +1,20 @@
+Possible Workflows
+The idea of having multiple remote repositories
+that you can push to and/or pull from is probably new to you,
+and many people have a hard time figuring out what their workflow should look like,
+especially if they are moving from a centralized SCM system.
+I will present a couple of possible workflows that I have seen,
+so you can determine what will work best for you and your team.
+Most of these are simply a matter of convention,
+not even configuration.
+Each of the models can pretty easily change to another with minimal configuration changes
+– maybe some permissions tweaked here or there.
+central repository model
+There is a single repository that all developers push to and pull from.
+This model works just like a centralized SCM and Git can work that way just fine.
+If you setup a repository for your team on a server that everyone has SSH or NFS access to,
+Git can very easily function as a centralized repository.
+This may be common on small teams with non-public projects where you don’t want to worry about a hierarchy
+– the strength of this model is that it forces everyone to stay up to date with each other and it doesn’t depend on a single role.
+Even large teams could use this,
+but in general there are a lot of gains to be made in larger teams with a different or hybrid model.

@@ -1,0 +1,6 @@
+The Tree
+Directories in Git basically correspond to trees.
+A tree is a simple list of trees and blobs that the tree contains,
+along with the names and modes of those trees and blobs.
+The contents section of a tree object consists of a very simple text file that
+lists the mode, type, name and sha of each entry.
