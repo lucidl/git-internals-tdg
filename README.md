@@ -1,6 +1,8 @@
 # git_internals_tdg
 This is the book Git Internals written by Scott Chacon in special educational and presentational format, where each picture is associated with n sentences.
 
+![tdg2](https://user-images.githubusercontent.com/2452010/94976395-35ccd300-0515-11eb-8a6f-abad064a6ddb.png)
+
 # Usage:
 1) clone repository https://github.com/lucidl/tedegraph/
 2) copy git_internals directory to your tdg_articles directory
