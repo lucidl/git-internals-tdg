@@ -10,8 +10,4 @@ This is the book Git Internals written by Scott Chacon in special educational an
 
 If you created another material in tdg format please share it as well.
 
-LICENSE: Creative Commons [Attribution-ShareAlike](http://creativecommons.org/licenses/by-sa/3.0/).
-
-Title: [Git Internals](https://github.com/pluralsight/git-internals-pdf)
-
-Author: [Scott Chacon](https://github.com/schacon)
+Based on *[Git Internals](https://github.com/pluralsight/git-internals-pdf)* by *[Scott Chacon](https://github.com/schacon)*, licensed under *[CC BY-SA](http://creativecommons.org/licenses/by-sa/3.0/)*
