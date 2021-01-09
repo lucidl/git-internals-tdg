@@ -8,6 +8,7 @@ This is the book Git Internals written by Scott Chacon in special educational an
 2) clone repository https://github.com/lucidl/git-internals-tdg
 3) copy git-internals-tdg directory to your tdg_articles directory
 4) read it with tdg.py
+5) if you want to read on smartphone or tablet, use https://github.com/lucidl/tedegraph-mobile
 
 If you created another material in tdg format please share it as well.
 
