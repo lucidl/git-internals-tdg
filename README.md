@@ -10,6 +10,6 @@ This is the book Git Internals written by Scott Chacon in special educational an
 4) read it with tdg.py
 5) if you want to read on smartphone or tablet, use https://github.com/lucidl/tedegraph-mobile
 
-If you created another material in tdg format please share it as well.
+If you are creative, you can contribute here https://www.facebook.com/groups/826250551297521 with creating new learning material.
 
 Based on *[Git Internals](https://github.com/pluralsight/git-internals-pdf)* by *[Scott Chacon](https://github.com/schacon)*, licensed under *[CC BY-SA](http://creativecommons.org/licenses/by-sa/3.0/)*
